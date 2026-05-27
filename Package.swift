@@ -17,10 +17,10 @@ let package = Package(
             name: "RGSColorSlider",
             path: "RGSColorSlider",
             sources: ["Classes"],
-            publicHeadersPath: "Classes",
             resources: [
                 .process("Assets")
             ],
+            publicHeadersPath: "Classes",
             cSettings: [
                 .headerSearchPath("Classes")
             ]
