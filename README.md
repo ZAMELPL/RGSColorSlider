@@ -4,27 +4,26 @@
 
 # RGSColorSlider
 
-[![Version](https://img.shields.io/cocoapods/v/RGSColorSlider.svg?style=flat)](http://cocoapods.org/pods/RGSColorSlider)
-[![License](https://img.shields.io/cocoapods/l/RGSColorSlider.svg?style=flat)](http://cocoapods.org/pods/RGSColorSlider)
-[![Platform](https://img.shields.io/cocoapods/p/RGSColorSlider.svg?style=flat)](http://cocoapods.org/pods/RGSColorSlider)
-
 A simple color slider for iOS.
 
 <img src="https://github.com/RGSSoftware/RGSColorSlider/blob/master/screenshots/screenshot.gif" alt="iPhone 5" width="396" />
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
 
 ## Installation
 
-RGSColorSlider is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Swift Package Manager
 
-```ruby
-pod "RGSColorSlider"
+In Xcode:
+
+1. File  Add Packages...
+2. Enter this repository URL
+3. Add the `RGSColorSlider` product to your target
+
+Or in `Package.swift`:
+
+```swift
+.package(url: "https://github.com/RGSSoftware/RGSColorSlider.git", from: "0.1.1")
 ```
 
 ## Using RGSColorSlider

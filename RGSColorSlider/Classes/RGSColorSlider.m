@@ -36,15 +36,14 @@
 }
 
 -(void)baseInit{
-    NSBundle *containerBundle = [NSBundle bundleForClass:RGSColorSlider.class];
-    NSString *path = [containerBundle pathForResource:@"RGSColorSlider" ofType:@"bundle"];
-    NSBundle *bundle = [NSBundle bundleWithPath:path];
-    
-    NSString *imagePath = [bundle pathForResource:@"colorTrack" ofType:@"png"];
-    NSURL *url = [NSURL fileURLWithPath:imagePath];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    
-    UIImage* image = [UIImage imageWithData:data];
+    // SwiftPM resources are placed in a separate bundle named <Package>_<Target>.
+    NSBundle *codeBundle = [NSBundle bundleForClass:RGSColorSlider.class];
+    NSURL *resourcesURL = [codeBundle URLForResource:@"RGSColorSlider_RGSColorSlider" withExtension:@"bundle"];
+    NSBundle *resourcesBundle = resourcesURL ? [NSBundle bundleWithURL:resourcesURL] : nil;
+    UIImage *image = nil;
+    if (resourcesBundle) {
+        image = [UIImage imageNamed:@"colorTrack" inBundle:resourcesBundle compatibleWithTraitCollection:nil];
+    }
     
     _colorTrackImageView = [[UIImageView alloc] initWithImage:image];
     [self addSubview:_colorTrackImageView];
