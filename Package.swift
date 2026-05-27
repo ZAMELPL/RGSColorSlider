@@ -16,8 +16,8 @@ let package = Package(
         .target(
             name: "RGSColorSlider",
             path: "RGSColorSlider",
-            publicHeadersPath: "Classes",
             sources: ["Classes"],
+            publicHeadersPath: "Classes",
             resources: [
                 .process("Assets")
             ],
